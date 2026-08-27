@@ -195,3 +195,14 @@ details p{margin:14px 0 0;color:var(--tinta-suave);font-size:.96rem}
 .aviso-dev b{color:var(--tinta)}
 .aviso-dev .tit{display:block;font-weight:700;color:var(--tinta);margin-bottom:6px;font-size:.95rem}
 .aviso-dev a{color:var(--teal-osc)}
+
+/* despiece y corte */
+.tecnico{background:var(--papel);border-top:1px solid var(--borde);border-bottom:1px solid var(--borde)}
+.diagramas{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:8px}
+.diag{background:var(--crema);border:1px solid var(--borde);border-radius:var(--r);
+  overflow:hidden;display:flex;flex-direction:column}
+.diag img{width:100%;display:block}
+.diag .pie-d{padding:18px 22px 22px}
+.diag h3{margin:0 0 6px;font-size:1.02rem}
+.diag p{margin:0;font-size:.93rem;color:var(--tinta-suave)}
+@media(max-width:860px){.diagramas{grid-template-columns:1fr}}
