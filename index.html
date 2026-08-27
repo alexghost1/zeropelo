@@ -59,13 +59,10 @@
       </ul>
     </div>
     <div class="hero-media">
-      <video id="hero-video" width="1024" height="1024" muted loop autoplay playsinline disablepictureinpicture
-             preload="none" poster="public/images/hero-560.jpg"
-             aria-label="El rodillo ZEROPELO girando sobre sí mismo"></video>
-      <noscript>
-        <img src="public/images/hero.jpg" width="1024" height="1024"
-             alt="Rodillo quitapelos ZEROPELO sobre fondo neutro">
-      </noscript>
+      <img src="public/images/hero.jpg" width="1024" height="1024"
+           srcset="public/images/hero-560.jpg 560w, public/images/hero.jpg 1024w"
+           sizes="(max-width: 860px) 92vw, 46vw"
+           alt="Rodillo quitapelos ZEROPELO con su tapa transparente" fetchpriority="high">
     </div>
   </div>
 </section>
@@ -192,10 +189,10 @@
       </div>
       <div class="pack dest">
         <span class="pack-tag">El que tiene sentido</span>
-        <div class="pack-img"><img src="public/images/kit.jpg" width="928" height="1152"
-             srcset="public/images/kit-600.jpg 620w, public/images/kit.jpg 928w"
+        <div class="pack-img"><img src="public/images/en-uso.jpg" width="928" height="1152"
+             srcset="public/images/en-uso-600.jpg 620w, public/images/en-uso.jpg 928w"
              sizes="(max-width: 860px) 92vw, 40vw"
-             loading="lazy" alt="Kit ZEROPELO: rodillo, guante de silicona y atrapapelos de lavadora"></div>
+             loading="lazy" alt="Pasando el rodillo ZEROPELO por un sofá con pelo de perro"></div>
         <h3>Kit ZEROPELO Completo</h3>
         <p style="color:var(--tenue);font-size:.92rem;margin:0">Para casa, ropa y mascota.</p>
         <div class="p">34,99 €</div>
@@ -226,17 +223,17 @@
 <section class="seccion problema">
   <div class="env rej rej-2" style="align-items:center">
     <div class="hero-media">
-      <img src="public/images/bodegon.jpg" width="928" height="1152"
-           srcset="public/images/bodegon-600.jpg 620w, public/images/bodegon.jpg 928w"
+      <img src="public/images/bolso.jpg" width="928" height="1152"
+           srcset="public/images/bolso-600.jpg 620w, public/images/bolso.jpg 928w"
            sizes="(max-width: 860px) 92vw, 46vw" loading="lazy"
            alt="Rodillo ZEROPELO sobre piedra travertino junto a una manta de lana y un jersey">
     </div>
     <div>
-      <h2>Está pensado para dejarlo a la vista</h2>
-      <p style="color:var(--tinta-suave)">La mayoría de los quitapelos se esconden en un cajón porque
-      son feos. Este no. Cuerpo mate, línea limpia y un tamaño que cabe en la mesa de la entrada,
-      que es exactamente donde lo vas a necesitar.</p>
-      <p style="color:var(--tinta-suave)">Y si está a la vista, lo usas. Ese es medio truco.</p>
+      <h2>Cabe donde lo necesitas</h2>
+      <p style="color:var(--tinta-suave)">160 gramos y 19,5 centímetros. Con la tapa puesta se
+      mete en el bolso, en la mochila o en la guantera sin pegarse a nada.</p>
+      <p style="color:var(--tinta-suave)">Y el pelo casi nunca aparece cuando estás en casa con
+      tiempo. Aparece cuando ya vas tarde.</p>
     </div>
   </div>
 </section>
@@ -367,53 +364,6 @@
 </footer>
 
 <script>
-/* VIDEO DEL HERO -----------------------------------------------------
-   El video solo se carga si el dispositivo puede permitirselo. Si el
-   usuario pide menos movimiento, tiene ahorro de datos o va con mala
-   conexion, se queda el poster: 27 KB en vez de 1,1 MB. */
-(function () {
-  var v = document.getElementById("hero-video");
-  if (!v) return;
-  var c = navigator.connection || {};
-
-  // Solo con ahorro de datos explicito se renuncia al video y queda el
-  // poster de 27 KB. En todo lo demas, el producto se mueve.
-  if (c.saveData === true) return;
-
-  // Safari y iOS decodifican HEVC, que aqui pesa la mitad.
-  var puedeHevc = document.createElement("video")
-      .canPlayType('video/mp4; codecs="hvc1"') !== "";
-  var fuente = document.createElement("source");
-  fuente.src = puedeHevc ? "public/video/hero-giro-hevc.mp4"
-                         : "public/video/hero-giro.mp4";
-  fuente.type = "video/mp4";
-  v.appendChild(fuente);
-  v.preload = "auto";
-  v.load();
-
-  // El producto gira siempre: es el escaparate. Sin controles a la vista.
-  var vd = document.querySelector(".diag-video");
-  if (vd) {
-    var f2 = document.createElement("source");
-    f2.src = puedeHevc ? "public/video/despiece-hevc.mp4" : "public/video/despiece.mp4";
-    f2.type = "video/mp4";
-    vd.appendChild(f2);
-    vd.preload = "auto";
-    vd.load();
-    vd.play().catch(function () {});
-  }
-
-  v.play().catch(function () {
-    // Si el navegador bloquea la reproduccion automatica, un toque en
-    // cualquier parte de la pagina la arranca.
-    var arrancar = function () {
-      v.play();
-      document.removeEventListener("pointerdown", arrancar);
-    };
-    document.addEventListener("pointerdown", arrancar, { once: true });
-  });
-})();
-
 /* CONFIGURACION DE PAGO ---------------------------------------------
    Pega aqui tus enlaces de pago (Stripe Payment Links o PayPal).
    En cuanto los pegues, los botones llevan al checkout automaticamente. */
