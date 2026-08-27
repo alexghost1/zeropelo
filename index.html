@@ -59,7 +59,7 @@
       </ul>
     </div>
     <div class="hero-media">
-      <video id="hero-video" width="1024" height="1024" muted loop playsinline
+      <video id="hero-video" width="1024" height="1024" muted loop autoplay playsinline disablepictureinpicture
              preload="none" poster="public/images/hero-560.jpg"
              aria-label="El rodillo ZEROPELO girando sobre sí mismo"></video>
       <noscript>
@@ -132,9 +132,7 @@
     </div>
     <div class="diagramas">
       <figure class="diag" style="margin:0">
-        <img src="public/images/corte.jpg" width="1024" height="1024" loading="lazy"
-             srcset="public/images/corte-600.jpg 620w, public/images/corte.jpg 1024w"
-             sizes="(max-width: 860px) 92vw, 46vw"
+        <img src="public/images/corte.svg" width="520" height="520" loading="lazy"
              alt="Corte del rodillo ZEROPELO: la cámara interior llena de pelo recogido">
         <figcaption class="pie-d">
           <h3>Dónde va el pelo</h3>
@@ -151,6 +149,15 @@
           <h3>Cómo se vacía</h3>
           <p>Abres la base y el pelo cae de una pieza. Dos segundos, sin tocarlo con la
           mano y sin nada que tirar salvo el propio pelo.</p>
+        </figcaption>
+      </figure>
+      <figure class="diag" style="margin:0">
+        <img src="public/images/despiece.svg" width="520" height="520" loading="lazy"
+             alt="Las tres piezas del rodillo separándose y volviendo a montarse">
+        <figcaption class="pie-d">
+          <h3>Tres piezas</h3>
+          <p>Mango, tambor y cuna. Nada más. Ninguna se gasta, ninguna caduca y
+          ninguna hay que volver a comprar.</p>
         </figcaption>
       </figure>
     </div>
@@ -383,11 +390,9 @@
   if (!v) return;
   var c = navigator.connection || {};
 
-  // Con mala conexion o ahorro de datos no se descarga el video: queda el
-  // poster de 27 KB. Es lo unico que justifica no cargarlo.
-  var conexionMala = c.saveData === true ||
-      (c.effectiveType && /^(slow-2g|2g|3g)$/.test(c.effectiveType));
-  if (conexionMala) return;
+  // Solo con ahorro de datos explicito se renuncia al video y queda el
+  // poster de 27 KB. En todo lo demas, el producto se mueve.
+  if (c.saveData === true) return;
 
   // Safari y iOS decodifican HEVC, que aqui pesa la mitad.
   var puedeHevc = document.createElement("video")
@@ -400,15 +405,16 @@
   v.preload = "auto";
   v.load();
 
-  // Quien pide menos movimiento NO deja de ver el video: deja de verlo
-  // moverse solo. Se le dan los controles y decide.
-  var pocoMovimiento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (pocoMovimiento) {
-    v.controls = true;
-    v.removeAttribute("loop");
-    return;
-  }
-  v.play().catch(function () { v.controls = true; });
+  // El producto gira siempre: es el escaparate. Sin controles a la vista.
+  v.play().catch(function () {
+    // Si el navegador bloquea la reproduccion automatica, un toque en
+    // cualquier parte de la pagina la arranca.
+    var arrancar = function () {
+      v.play();
+      document.removeEventListener("pointerdown", arrancar);
+    };
+    document.addEventListener("pointerdown", arrancar, { once: true });
+  });
 })();
 
 /* CONFIGURACION DE PAGO ---------------------------------------------

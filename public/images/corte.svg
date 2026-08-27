@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" role="img"
+     aria-labelledby="t-corte d-corte">
+  <title id="t-corte">Corte del rodillo ZEROPELO</title>
+  <desc id="d-corte">Sección del rodillo: las cerdas del tambor arrastran el pelo hacia la cámara interior, donde se compacta.</desc>
+
+  <defs>
+    <linearGradient id="crema" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FEFDFA"/><stop offset="1" stop-color="#EFE9DE"/>
+    </linearGradient>
+    <linearGradient id="tealG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#12766D"/><stop offset="1" stop-color="#0B534D"/>
+    </linearGradient>
+    <clipPath id="dentro"><rect x="128" y="214" width="150" height="150" rx="8"/></clipPath>
+  </defs>
+
+  <rect width="520" height="520" fill="#F5EFE3"/>
+
+  <!-- mango -->
+  <path d="M300 250 L392 148 a26 26 0 0 1 40 34 L340 284 Z" fill="url(#crema)" stroke="#C9BFAC" stroke-width="2.5"/>
+  <ellipse cx="372" cy="196" rx="9" ry="13" fill="#E4DCCB" transform="rotate(-42 372 196)"/>
+
+  <!-- cuna teal: envuelve por debajo y sube por la derecha -->
+  <path d="M104 236 a26 26 0 0 1 26-26 h178 a56 56 0 0 1 0 112 h-178 a26 26 0 0 1 -26-26 Z"
+        fill="url(#tealG)" stroke="#08403B" stroke-width="2.5"/>
+  <path d="M132 340 h150" stroke="#0A4A44" stroke-width="3" stroke-linecap="round"/>
+  <rect x="222" y="330" width="30" height="8" rx="4" fill="#0A4A44"/>
+
+  <!-- tambor crema, mitad delantera retirada -->
+  <path d="M128 214 h150 a52 52 0 0 1 0 104 h-150 Z" fill="url(#crema)" stroke="#C9BFAC" stroke-width="2.5"/>
+
+  <!-- interior visible: pared, cerdas y pelo -->
+  <g clip-path="url(#dentro)">
+    <rect x="128" y="214" width="150" height="104" fill="#DCD3C2"/>
+    <rect x="128" y="214" width="150" height="104" fill="#CFC5B2" opacity="0.55"/>
+    <!-- cerdas en la cara interior -->
+    <g stroke="#3A342B" stroke-width="2" stroke-linecap="round">
+      <path d="M132 218 v13 M141 218 v13 M150 218 v13 M159 218 v13 M168 218 v13 M177 218 v13 M186 218 v13 M195 218 v13 M204 218 v13 M213 218 v13 M222 218 v13 M231 218 v13 M240 218 v13 M249 218 v13 M258 218 v13 M267 218 v13"/>
+      <path d="M132 314 v-13 M141 314 v-13 M150 314 v-13 M159 314 v-13 M168 314 v-13 M177 314 v-13 M186 314 v-13 M195 314 v-13 M204 314 v-13 M213 314 v-13 M222 314 v-13 M231 314 v-13 M240 314 v-13 M249 314 v-13 M258 314 v-13 M267 314 v-13"/>
+    </g>
+    <!-- pelo compactado -->
+    <g stroke="#9C9488" fill="none" stroke-linecap="round" opacity="0.95">
+      <path d="M140 268 c22-26 52-16 66 2 c14 18 44 20 62-6" stroke-width="2.6"/>
+      <path d="M138 252 c26 18 48-6 76 6 c20 8 38-2 52-16" stroke-width="2.2"/>
+      <path d="M142 284 c30-18 44 12 74 2 c22-8 38 6 52 14" stroke-width="2.4"/>
+      <path d="M150 240 c18 28 60 10 76 26 c10 10 30 8 42-4" stroke-width="1.8" opacity="0.8"/>
+      <path d="M136 296 c34-6 40-30 74-26 c22 2 36 18 56 12" stroke-width="1.8" opacity="0.8"/>
+      <path d="M158 232 c-4 30 26 40 22 62 c-2 14 12 22 28 20" stroke-width="1.6" opacity="0.65"/>
+      <path d="M214 226 c8 32-18 44-8 66 c6 12 24 14 38 6" stroke-width="1.6" opacity="0.65"/>
+    </g>
+  </g>
+
+  <!-- borde del corte -->
+  <path d="M128 214 v104" stroke="#B3A992" stroke-width="3.5" stroke-linecap="round"/>
+  <rect x="128" y="214" width="150" height="104" fill="none" stroke="#C9BFAC" stroke-width="2.5"/>
+</svg>
