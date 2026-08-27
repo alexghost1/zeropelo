@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" role="img"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="76 128 396 282" role="img"
      aria-labelledby="t-desp d-desp">
   <title id="t-desp">Despiece animado del rodillo ZEROPELO</title>
   <desc id="d-desp">Las tres piezas del rodillo se separan y vuelven a montarse: mango, tambor y cuna.</desc>
@@ -23,7 +23,7 @@
     </style>
   </defs>
 
-  <rect width="520" height="520" fill="#F5EFE3"/>
+  <rect x="0" y="0" width="620" height="620" fill="#F5EFE3"/>
 
   <!-- eje de montaje, solo visible cuando las piezas estan separadas -->
   <g class="guia">
