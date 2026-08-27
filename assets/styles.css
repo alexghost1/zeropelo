@@ -216,3 +216,6 @@ details p{margin:14px 0 0;color:var(--tinta-suave);font-size:.96rem}
 .hero-media video::-webkit-media-controls-enclosure,
 .hero-media video::-webkit-media-controls-panel { display: none !important; }
 .hero-media video { pointer-events: none; }
+.diag .diag-video{width:100%;height:auto;display:block;background:var(--crema);pointer-events:none}
+.diag video::-webkit-media-controls,
+.diag video::-webkit-media-controls-enclosure{display:none !important}

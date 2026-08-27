@@ -152,8 +152,9 @@
         </figcaption>
       </figure>
       <figure class="diag" style="margin:0">
-        <img src="public/images/despiece.svg" width="396" height="282" loading="lazy"
-             alt="Las tres piezas del rodillo separándose y volviendo a montarse">
+        <video class="diag-video" width="640" height="640" muted loop autoplay playsinline
+               preload="none" poster="public/images/despiece-poster.jpg"
+               aria-label="Las tres piezas del rodillo separándose y volviendo a montarse"></video>
         <figcaption class="pie-d">
           <h3>Tres piezas</h3>
           <p>Mango, tambor y cuna. Nada más. Ninguna se gasta, ninguna caduca y
@@ -406,6 +407,17 @@
   v.load();
 
   // El producto gira siempre: es el escaparate. Sin controles a la vista.
+  var vd = document.querySelector(".diag-video");
+  if (vd) {
+    var f2 = document.createElement("source");
+    f2.src = puedeHevc ? "public/video/despiece-hevc.mp4" : "public/video/despiece.mp4";
+    f2.type = "video/mp4";
+    vd.appendChild(f2);
+    vd.preload = "auto";
+    vd.load();
+    vd.play().catch(function () {});
+  }
+
   v.play().catch(function () {
     // Si el navegador bloquea la reproduccion automatica, un toque en
     // cualquier parte de la pagina la arranca.
