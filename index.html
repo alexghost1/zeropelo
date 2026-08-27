@@ -10,9 +10,7 @@
 <meta property="og:image" content="https://alexghost1.github.io/zeropelo/public/images/hero.jpg">
 <meta property="og:type" content="product">
 <link rel="stylesheet" href="assets/styles.css">
-<link rel="preload" as="image" href="public/images/hero-560.jpg"
-      imagesrcset="public/images/hero-560.jpg 560w, public/images/hero.jpg 1024w"
-      imagesizes="(max-width: 860px) 92vw, 46vw">
+<link rel="preload" as="image" href="public/images/hero-560.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -61,10 +59,13 @@
       </ul>
     </div>
     <div class="hero-media">
-      <img src="public/images/hero.jpg" width="1024" height="1024"
-           srcset="public/images/hero-560.jpg 560w, public/images/hero.jpg 1024w"
-           sizes="(max-width: 860px) 92vw, 46vw"
-           alt="Rodillo quitapelos ZEROPELO sobre fondo neutro" fetchpriority="high">
+      <video id="hero-video" width="1024" height="1024" muted loop playsinline
+             preload="none" poster="public/images/hero-560.jpg"
+             aria-label="El rodillo ZEROPELO girando sobre sí mismo"></video>
+      <noscript>
+        <img src="public/images/hero.jpg" width="1024" height="1024"
+             alt="Rodillo quitapelos ZEROPELO sobre fondo neutro">
+      </noscript>
     </div>
   </div>
 </section>
@@ -373,6 +374,32 @@
 </footer>
 
 <script>
+/* VIDEO DEL HERO -----------------------------------------------------
+   El video solo se carga si el dispositivo puede permitirselo. Si el
+   usuario pide menos movimiento, tiene ahorro de datos o va con mala
+   conexion, se queda el poster: 27 KB en vez de 1,1 MB. */
+(function () {
+  var v = document.getElementById("hero-video");
+  if (!v) return;
+  var c = navigator.connection || {};
+  var pocoMovimiento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var conexionMala = c.saveData === true ||
+      (c.effectiveType && /^(slow-2g|2g|3g)$/.test(c.effectiveType));
+  if (pocoMovimiento || conexionMala) return;
+
+  // Safari y iOS decodifican HEVC, que aqui pesa la mitad.
+  var puedeHevc = document.createElement("video")
+      .canPlayType('video/mp4; codecs="hvc1"') !== "";
+  var fuente = document.createElement("source");
+  fuente.src = puedeHevc ? "public/video/hero-giro-hevc.mp4"
+                         : "public/video/hero-giro.mp4";
+  fuente.type = "video/mp4";
+  v.appendChild(fuente);
+  v.preload = "auto";
+  v.load();
+  v.play().catch(function () { /* si el navegador lo bloquea, queda el poster */ });
+})();
+
 /* CONFIGURACION DE PAGO ---------------------------------------------
    Pega aqui tus enlaces de pago (Stripe Payment Links o PayPal).
    En cuanto los pegues, los botones llevan al checkout automaticamente. */

@@ -206,3 +206,7 @@ details p{margin:14px 0 0;color:var(--tinta-suave);font-size:.96rem}
 .diag h3{margin:0 0 6px;font-size:1.02rem}
 .diag p{margin:0;font-size:.93rem;color:var(--tinta-suave)}
 @media(max-width:860px){.diagramas{grid-template-columns:1fr}}
+
+/* video del hero */
+.hero-media{position:relative}
+.hero-media video{width:100%;height:auto;display:block;background:var(--papel)}
