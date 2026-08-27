@@ -158,12 +158,22 @@ completo, no solo el trozo modificado.
 |---|---|---|
 | 1 | Pedirse una muestra del producto | Requiere su tarjeta. Y sin producto real no hay vídeo real. |
 | 2 | Crear cuenta Stripe y dos Payment Links | Requiere su identidad fiscal e IBAN. |
-| 3 | Rellenar los datos fiscales en las 4 páginas legales | Son sus datos. |
+| 3 | Rellenar los datos de la SL en las 4 páginas legales | Son datos de su sociedad. Los huecos ya están en forma societaria. |
 | 4 | Decidir quién paga las devoluciones | Decisión de negocio **con efecto legal**: si lo paga el cliente hay que avisarlo ANTES del pedido, o lo paga el vendedor por ley (art. 108.2 RDL 1/2007). |
 | 5 | Borrar el aviso «Tienda en preparación» y publicar | Un `git push`. |
 
-**Decisión de fondo abierta:** darse de alta como autónomo. Vender de forma habitual en
-España lo exige.
+**Vehículo fiscal: SL española.** El propietario dispone de una sociedad limitada
+registrada en España que actuará como paraguas de este y otros proyectos. Con su CIF se
+abren pasarela de pago, cuenta bancaria y cuentas de proveedor, y figura como titular en
+el aviso legal. Las páginas legales ya están en forma societaria (incluidos datos
+registrales, exigibles a personas jurídicas por la Ley 34/2002).
+
+Ventaja no menor: la responsabilidad queda limitada al capital social, lo que importa en
+un negocio donde el vendedor es *importador* a efectos de la Directiva 85/374/CEE.
+
+Queda por confirmar: poder de representación, que el objeto social cubra el comercio
+electrónico, que la sociedad esté al corriente, y el epígrafe de IAE (normalmente el 665).
+El detalle está en `FISCAL.md` del proyecto local, que **no se publica**.
 
 **Cómo conectar el pago:** en `index.html`, al final, hay una constante `PAGOS` con dos
 huecos vacíos. Pegando ahí los enlaces de Stripe, los botones funcionan solos.
