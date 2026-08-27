@@ -168,3 +168,22 @@ details p{margin:14px 0 0;color:var(--tinta-suave);font-size:.96rem}
   .pie-rej{grid-template-columns:1fr;gap:28px}
   .hero-media{order:-1}
 }
+
+/* captura de email */
+.captura{background:var(--teal-claro);border:1px solid #c5e0dc;border-radius:var(--r);
+  padding:clamp(28px,5vw,46px);text-align:center;max-width:720px;margin:0 auto}
+.captura h2{margin-bottom:.35em}
+.captura p.intro{color:var(--tinta-suave);max-width:48ch;margin:0 auto 26px}
+.form-fila{display:flex;gap:10px;max-width:470px;margin:0 auto 14px}
+.form-fila input{flex:1;min-width:0;padding:15px 17px;border:1.5px solid var(--borde);
+  border-radius:var(--r);font:inherit;font-size:1rem;background:var(--papel);color:var(--tinta)}
+.form-fila input:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(15,107,99,.15)}
+.form-fila .btn{white-space:nowrap;padding:15px 26px}
+.consent{display:flex;gap:.6rem;align-items:flex-start;max-width:470px;margin:0 auto;
+  text-align:left;font-size:.85rem;color:var(--tinta-suave);line-height:1.5}
+.consent input{margin-top:3px;flex:0 0 auto;width:17px;height:17px;accent-color:var(--teal)}
+.form-msg{margin:16px 0 0;font-size:.93rem;font-weight:600;min-height:1.3em}
+.form-msg.ok{color:var(--exito)}
+.form-msg.err{color:#b23c2c}
+.pack-img{border-radius:10px;overflow:hidden;margin:-6px 0 16px;background:var(--crema)}
+@media(max-width:520px){.form-fila{flex-direction:column}}
