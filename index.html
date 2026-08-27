@@ -18,25 +18,317 @@
 
 <!-- ════════════════════════════════════════════════════════════════
      PARA PUBLICAR DE VERDAD: borra el bloque <div class="aviso-borrador">
-     que hay justo debajo, y rellena PAGOS en el <script>
-/* ═══════════════════════════════════════════════════════════════════
-   1. CONFIGURACIÓN DE PAGO
-   Pega aquí tus enlaces de pago (Stripe Payment Links o PayPal).
-   En cuanto los pegues, los botones llevan al checkout automáticamente.
-   ═══════════════════════════════════════════════════════════════════ */
+     que hay justo debajo, y rellena PAGOS en el bloque de codigo del final.
+     ════════════════════════════════════════════════════════════════ -->
+<div class="aviso-borrador">
+  <strong>Tienda en preparación.</strong> El escaparate está terminado, pero la pasarela de pago
+  todavía no está conectada. Ningún pedido puede completarse en este momento.
+</div>
+
+<div class="barra">Envío gratis a toda España · Entrega en 3-7 días desde almacén español</div>
+
+<header class="cab">
+  <div class="env">
+    <a class="marca" href="index.html">ZERO<span>PELO</span></a>
+    <a class="btn" href="#comprar" style="padding:11px 22px;font-size:.94rem">Lo quiero</a>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="env hero-rej">
+    <div>
+      <span class="etiqueta">Sin recambios · Sin pilas</span>
+      <h1>El pelo de tu mascota deja de ser tu problema diario</h1>
+      <p class="sub">Una pasada por el sofá y el pelo desaparece. Se vacía en dos segundos
+      y vuelve a estar listo. No compras recambios nunca más.</p>
+
+      <div class="precio"><span class="ahora">24,99 €</span></div>
+      <p class="iva">IVA incluido. Envío gratuito a España peninsular.</p>
+
+      <a class="btn btn-g" href="#comprar">Quiero el mío</a>
+
+      <ul class="ventajas">
+        <li><span class="tic">✓</span><span>Funciona en sofá, ropa, cama, alfombra y tapicería del coche</span></li>
+        <li><span class="tic">✓</span><span>Sin adhesivo y sin rollos de repuesto: se vacía y se reutiliza</span></li>
+        <li><span class="tic">✓</span><span>No necesita pilas ni enchufe</span></li>
+        <li><span class="tic">✓</span><span>Sale de un almacén en España, no de China</span></li>
+      </ul>
+    </div>
+    <div class="hero-media">
+      <img src="public/images/hero.jpg" width="1024" height="1024"
+           alt="Rodillo quitapelos ZEROPELO sobre fondo neutro" fetchpriority="high">
+    </div>
+  </div>
+</section>
+
+<!-- CONFIANZA -->
+<section class="confianza">
+  <div class="env">
+    <div class="conf-it"><b>3-7 días</b><span>Desde almacén en España</span></div>
+    <div class="conf-it"><b>Envío gratis</b><span>Sin pedido mínimo</span></div>
+    <div class="conf-it"><b>14 días</b><span>Derecho de desistimiento</span></div>
+    <div class="conf-it"><b>Sin recambios</b><span>Coste cero de por vida</span></div>
+  </div>
+</section>
+
+<!-- PROBLEMA -->
+<section class="seccion problema">
+  <div class="env rej rej-2" style="align-items:center">
+    <div>
+      <h2>Convives con ello todos los días</h2>
+      <p style="color:var(--tinta-suave)">Si tienes perro o gato, esto te suena. No es un problema
+      grave. Es un problema constante, que es peor.</p>
+      <ul>
+        <li><span class="cruz">✕</span><span>Te cambias antes de salir y la ropa oscura ya lleva pelo.</span></li>
+        <li><span class="cruz">✕</span><span>Aspiras el sofá y a las dos horas está otra vez igual.</span></li>
+        <li><span class="cruz">✕</span><span>Se te acaban los rollos adhesivos siempre en el peor momento.</span></li>
+        <li><span class="cruz">✕</span><span>Avisas a alguien antes de que se siente en tu sofá.</span></li>
+      </ul>
+    </div>
+    <div class="hero-media">
+      <img src="public/images/en-uso.jpg" width="928" height="1152" loading="lazy"
+           alt="Mano pasando el rodillo ZEROPELO por un sofá gris con pelo de perro">
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO FUNCIONA -->
+<section class="seccion">
+  <div class="env">
+    <div class="centro">
+      <h2>Tres movimientos y ya está</h2>
+      <p class="entradilla">Sin instrucciones, sin montaje y sin nada que se gaste.</p>
+    </div>
+    <div class="rej rej-3">
+      <div class="tarjeta"><div class="paso-n">1</div><h3>Pasas</h3>
+        <p>Deslizas el rodillo sobre la tela en un sentido y en el otro. El cepillo interior
+        arrastra el pelo hacia dentro.</p></div>
+      <div class="tarjeta"><div class="paso-n">2</div><h3>Vacías</h3>
+        <p>Abres la base y tiras el pelo acumulado. Dos segundos, sin tocarlo con la mano.</p></div>
+      <div class="tarjeta"><div class="paso-n">3</div><h3>Repites</h3>
+        <p>Vuelve a estar listo. Sin recambios que comprar, sin adhesivo que se agote.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARATIVA -->
+<section class="seccion problema">
+  <div class="env">
+    <div class="centro">
+      <h2>Frente al rodillo adhesivo de siempre</h2>
+      <p class="entradilla">La diferencia no está en cómo limpia. Está en lo que te cuesta mantenerlo.</p>
+    </div>
+    <div class="tabla-env">
+      <table>
+        <thead><tr><th></th><th class="dest">ZEROPELO</th><th>Rodillo adhesivo</th></tr></thead>
+        <tbody>
+          <tr><td>Recambios</td><td class="si">Ninguno</td><td class="no">Rollos de por vida</td></tr>
+          <tr><td>Coste por uso</td><td class="si">0 €</td><td class="no">Creciente</td></tr>
+          <tr><td>Residuos</td><td class="si">Cero</td><td class="no">Una hoja por pasada</td></tr>
+          <tr><td>Pilas o enchufe</td><td class="si">No necesita</td><td class="no">No necesita</td></tr>
+          <tr><td>Se agota a mitad</td><td class="si">Nunca</td><td class="no">Siempre</td></tr>
+          <tr><td>Vida útil</td><td class="si">Años</td><td class="no">Semanas</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTA -->
+<section class="seccion" id="comprar">
+  <div class="env">
+    <div class="centro">
+      <h2>Elige tu opción</h2>
+      <p class="entradilla">Envío gratuito en las dos. Si no te convence, tienes 14 días para devolverlo.</p>
+    </div>
+    <div class="packs">
+      <div class="pack">
+        <h3>Rodillo ZEROPELO</h3>
+        <p style="color:var(--tenue);font-size:.92rem;margin:0">El básico, para empezar.</p>
+        <div class="p">24,99 €</div>
+        <p class="iva">IVA incluido · Envío gratis</p>
+        <ul>
+          <li><span class="tic">✓</span><span>1 rodillo reutilizable</span></li>
+          <li><span class="tic">✓</span><span>Envío gratuito desde España</span></li>
+          <li><span class="tic">✓</span><span>14 días de devolución</span></li>
+        </ul>
+        <button class="btn btn-g btn-sec" data-pago="hero">Comprar el rodillo</button>
+      </div>
+      <div class="pack dest">
+        <span class="pack-tag">El que tiene sentido</span>
+        <div class="pack-img"><img src="public/images/kit.jpg" width="928" height="1152"
+             loading="lazy" alt="Kit ZEROPELO: rodillo, guante de silicona y atrapapelos de lavadora"></div>
+        <h3>Kit ZEROPELO Completo</h3>
+        <p style="color:var(--tenue);font-size:.92rem;margin:0">Para casa, ropa y mascota.</p>
+        <div class="p">34,99 €</div>
+        <p class="iva">IVA incluido · Envío gratis</p>
+        <ul>
+          <li><span class="tic">✓</span><span>1 rodillo reutilizable</span></li>
+          <li><span class="tic">✓</span><span>Guante de silicona para cepillar y recoger pelo</span></li>
+          <li><span class="tic">✓</span><span>Cepillo atrapapelos para la lavadora</span></li>
+          <li><span class="tic">✓</span><span>Envío gratuito y 14 días de devolución</span></li>
+        </ul>
+        <button class="btn btn-g" data-pago="kit">Quiero el kit completo</button>
+      </div>
+    </div>
+    <p id="pago-nota" class="centro" style="margin-top:20px;font-size:.9rem;color:var(--tenue)"></p>
+  </div>
+</section>
+
+<!-- BODEGÓN -->
+<section class="seccion problema">
+  <div class="env rej rej-2" style="align-items:center">
+    <div class="hero-media">
+      <img src="public/images/bodegon.jpg" width="928" height="1152" loading="lazy"
+           alt="Rodillo ZEROPELO sobre piedra travertino junto a una manta de lana y un jersey">
+    </div>
+    <div>
+      <h2>Está pensado para dejarlo a la vista</h2>
+      <p style="color:var(--tinta-suave)">La mayoría de los quitapelos se esconden en un cajón porque
+      son feos. Este no. Cuerpo mate, línea limpia y un tamaño que cabe en la mesa de la entrada,
+      que es exactamente donde lo vas a necesitar.</p>
+      <p style="color:var(--tinta-suave)">Y si está a la vista, lo usas. Ese es medio truco.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="seccion">
+  <div class="env">
+    <div class="centro">
+      <h2>Lo que dicen quienes ya lo usan</h2>
+      <p class="entradilla">Espacio reservado para reseñas reales de clientes reales.</p>
+    </div>
+    <div class="rej rej-3">
+      <div class="tst">
+        <span class="marcador">Pendiente de reseña real</span>
+        <div class="tst-cab"><div class="tst-av"><b>—</b></div>
+          <div><b>Nombre del cliente</b><br><span style="font-size:.83rem;color:var(--tenue)">Ciudad</span></div></div>
+        <blockquote>Aquí va una reseña verificada de un cliente que haya comprado y recibido el producto.</blockquote>
+      </div>
+      <div class="tst">
+        <span class="marcador">Pendiente de reseña real</span>
+        <div class="tst-cab"><div class="tst-av"><b>—</b></div>
+          <div><b>Nombre del cliente</b><br><span style="font-size:.83rem;color:var(--tenue)">Ciudad</span></div></div>
+        <blockquote>Aquí va una reseña verificada de un cliente que haya comprado y recibido el producto.</blockquote>
+      </div>
+      <div class="tst">
+        <span class="marcador">Pendiente de reseña real</span>
+        <div class="tst-cab"><div class="tst-av"><b>—</b></div>
+          <div><b>Nombre del cliente</b><br><span style="font-size:.83rem;color:var(--tenue)">Ciudad</span></div></div>
+        <blockquote>Aquí va una reseña verificada de un cliente que haya comprado y recibido el producto.</blockquote>
+      </div>
+    </div>
+    <p class="centro" style="margin-top:24px;font-size:.88rem;color:var(--tenue);max-width:64ch;margin-left:auto;margin-right:auto">
+      Estos huecos están vacíos a propósito. Inventar reseñas de clientes que no existen está
+      prohibido en la Unión Europea por la Directiva Ómnibus, traspuesta en España por el
+      Real Decreto-ley 24/2021. Se rellenan cuando haya pedidos entregados.
+    </p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="seccion problema">
+  <div class="env" style="max-width:760px">
+    <div class="centro"><h2>Preguntas frecuentes</h2></div>
+    <details open><summary>¿Sirve para gato y para perro?</summary>
+      <p>Sí. Funciona igual con pelo corto y con pelo largo, porque no depende del adhesivo sino
+      del cepillo interior que arrastra el pelo hacia la cámara.</p></details>
+    <details><summary>¿De verdad no hay que comprar recambios?</summary>
+      <p>No hay recambios. El pelo se acumula dentro y se tira abriendo la base. Es la diferencia
+      principal frente a un rodillo adhesivo, que consume una hoja en cada pasada.</p></details>
+    <details><summary>¿Cuánto tarda en llegar?</summary>
+      <p>Entre 3 y 7 días laborables. Sale de un almacén situado en España, no directamente de Asia.</p></details>
+    <details><summary>¿Puedo devolverlo si no me convence?</summary>
+      <p>Sí. Dispones de 14 días naturales desde la recepción para desistir de la compra sin
+      justificar el motivo, conforme al Real Decreto Legislativo 1/2007. Puedes consultar el
+      procedimiento completo en la <a href="legal/devoluciones.html">política de devoluciones</a>.</p></details>
+    <details><summary>¿Se puede lavar?</summary>
+      <p>El cuerpo se limpia con un paño húmedo. No debe sumergirse ni meterse en el lavavajillas.</p></details>
+  </div>
+</section>
+
+<!-- CAPTURA DE EMAIL -->
+<section class="seccion">
+  <div class="env">
+    <div class="captura">
+      <h2>¿Todavía no lo tienes claro?</h2>
+      <p class="intro">Déjanos tu correo y te avisamos cuando abramos pedidos, con la guía
+      de las cinco cosas que de verdad funcionan contra el pelo en casa. Nada más.</p>
+      <form id="form-email" novalidate>
+        <div class="form-fila">
+          <input type="email" id="email" name="email" required autocomplete="email"
+                 placeholder="tu@correo.com" aria-label="Tu correo electrónico">
+          <button class="btn" type="submit">Avísame</button>
+        </div>
+        <label class="consent">
+          <input type="checkbox" id="consent" required>
+          <span>Acepto recibir comunicaciones comerciales de ZEROPELO y he leído la
+          <a href="legal/privacidad.html">política de privacidad</a>. Puedo darme de baja
+          cuando quiera.</span>
+        </label>
+        <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="seccion cta-final">
+  <div class="env">
+    <h2>Tu sofá puede volver a ser de color liso</h2>
+    <p>Sin recambios, sin pilas y sin tener que avisar a nadie antes de que se siente.</p>
+    <a class="btn" href="#comprar">Ver las opciones</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="pie">
+  <div class="env">
+    <div class="pie-rej">
+      <div>
+        <div class="marca-pie">ZEROPELO</div>
+        <p style="margin-top:10px;max-width:34ch">Quitapelos reutilizable para quienes viven con
+        perro o con gato y prefieren no vivir con su pelo.</p>
+      </div>
+      <div><h4>Tienda</h4><ul>
+        <li><a href="#comprar">Comprar</a></li>
+        <li><a href="#comprar">Kit completo</a></li>
+      </ul></div>
+      <div><h4>Legal</h4><ul>
+        <li><a href="legal/aviso-legal.html">Aviso legal</a></li>
+        <li><a href="legal/privacidad.html">Privacidad</a></li>
+        <li><a href="legal/terminos.html">Términos y condiciones</a></li>
+        <li><a href="legal/devoluciones.html">Devoluciones</a></li>
+      </ul></div>
+    </div>
+    <div class="pie-fin">
+      <p>© 2026 ZEROPELO. Todos los derechos reservados.</p>
+      <p style="color:#8a8378">Los datos fiscales del titular están pendientes de cumplimentar en
+      el aviso legal. Son obligatorios antes de vender, según la Ley 34/2002 (LSSI-CE).</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* CONFIGURACION DE PAGO ---------------------------------------------
+   Pega aqui tus enlaces de pago (Stripe Payment Links o PayPal).
+   En cuanto los pegues, los botones llevan al checkout automaticamente. */
 const PAGOS = {
   hero: "",   // ej: "https://buy.stripe.com/xxxxxxxxxxxx"
   kit:  ""    // ej: "https://buy.stripe.com/yyyyyyyyyyyy"
 };
 
-/* ═══════════════════════════════════════════════════════════════════
-   2. ANALÍTICA Y CAPTURA DE EMAIL (Supabase, proyecto garcia-os)
-   La analítica NO guarda IP, ni user agent, ni cookies, ni ningún
+/* ANALITICA Y CAPTURA DE EMAIL (Supabase, proyecto garcia-os) --------
+   La analitica NO guarda IP, ni user agent, ni cookies, ni ningun
    identificador. Por eso no necesita banner de consentimiento.
-   La clave de abajo es pública por diseño: solo permite INSERTAR.
-   ═══════════════════════════════════════════════════════════════════ */
-const SB_URL  = "https://fnaqlnfakpkfcyhvybth.supabase.co";
-const SB_KEY  = "sb_publishable_40aJM_WthTYd6_X1YzafZg_0PdirwL6";
+   La clave de abajo es publica por diseno: solo permite INSERTAR. */
+const SB_URL = "https://fnaqlnfakpkfcyhvybth.supabase.co";
+const SB_KEY = "sb_publishable_40aJM_WthTYd6_X1YzafZg_0PdirwL6";
 
 function sbInsert(tabla, fila) {
   return fetch(SB_URL + "/rest/v1/" + tabla, {
@@ -52,42 +344,41 @@ function sbInsert(tabla, fila) {
 }
 
 function registrar(tipo) {
-  var ref = "";
-  try { ref = document.referrer ? new URL(document.referrer).hostname : "directo"; }
+  var ref = "directo";
+  try { if (document.referrer) { ref = new URL(document.referrer).hostname; } }
   catch (e) { ref = "directo"; }
   sbInsert("zeropelo_eventos", {
     tipo: tipo,
     ruta: location.pathname.slice(0, 200),
     referente: ref.slice(0, 200)
-  }).catch(function () { /* la analítica nunca debe romper la página */ });
+  }).catch(function () { /* la analitica nunca debe romper la pagina */ });
 }
 
 registrar("visita");
 
-/* ── Botones de compra ───────────────────────────────────────────── */
 document.querySelectorAll("[data-pago]").forEach(function (b) {
   b.addEventListener("click", function () {
     registrar(b.dataset.pago === "kit" ? "clic_kit" : "clic_comprar");
     var destino = PAGOS[b.dataset.pago];
     var nota = document.getElementById("pago-nota");
     if (destino) { window.location.href = destino; return; }
-    nota.textContent = "Pasarela de pago todavía no conectada. Añade tus enlaces en la constante PAGOS de index.html.";
+    nota.textContent = "Pasarela de pago todavia no conectada. Anade tus enlaces en la constante PAGOS de index.html.";
     nota.style.color = "#b23c2c";
     nota.scrollIntoView({ behavior: "smooth", block: "center" });
   });
 });
 
-/* ── Alta de email ───────────────────────────────────────────────── */
 var form = document.getElementById("form-email");
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  var email   = document.getElementById("email").value.trim();
+  var email = document.getElementById("email").value.trim();
   var consent = document.getElementById("consent").checked;
-  var msg     = document.getElementById("form-msg");
-  var boton   = form.querySelector("button");
+  var msg = document.getElementById("form-msg");
+  var boton = form.querySelector("button");
+  var patron = new RegExp("^[^@\\s]+@[^@\\s]+\\.[^@\\s]{2,}$");
 
   msg.className = "form-msg";
-  if (!/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(email)) {
+  if (!patron.test(email)) {
     msg.textContent = "Revisa el correo, parece que falta algo.";
     msg.classList.add("err"); return;
   }
@@ -97,26 +388,25 @@ form.addEventListener("submit", function (e) {
   }
 
   boton.disabled = true;
-  boton.textContent = "Enviando…";
+  boton.textContent = "Enviando...";
 
   sbInsert("zeropelo_leads", { email: email, consentimiento: true, origen: "tienda" })
     .then(function (r) {
       if (r.ok) {
         registrar("alta_email");
-        form.innerHTML = '<p class="form-msg ok" style="font-size:1.05rem">' +
-          'Apuntado. Te escribimos en cuanto abramos pedidos.</p>';
+        form.innerHTML = '<p class="form-msg ok" style="font-size:1.05rem">Apuntado. Te escribimos en cuanto abramos pedidos.</p>';
       } else if (r.status === 409) {
-        msg.textContent = "Ese correo ya estaba apuntado. No hace falta nada más.";
+        msg.textContent = "Ese correo ya estaba apuntado. No hace falta nada mas.";
         msg.classList.add("ok");
-        boton.disabled = false; boton.textContent = "Avísame";
+        boton.disabled = false; boton.textContent = "Avisame";
       } else {
         throw new Error("HTTP " + r.status);
       }
     })
     .catch(function () {
-      msg.textContent = "No hemos podido guardarlo. Inténtalo dentro de un momento.";
+      msg.textContent = "No hemos podido guardarlo. Intentalo dentro de un momento.";
       msg.classList.add("err");
-      boton.disabled = false; boton.textContent = "Avísame";
+      boton.disabled = false; boton.textContent = "Avisame";
     });
 });
 </script>
