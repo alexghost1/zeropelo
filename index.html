@@ -382,10 +382,12 @@
   var v = document.getElementById("hero-video");
   if (!v) return;
   var c = navigator.connection || {};
-  var pocoMovimiento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Con mala conexion o ahorro de datos no se descarga el video: queda el
+  // poster de 27 KB. Es lo unico que justifica no cargarlo.
   var conexionMala = c.saveData === true ||
       (c.effectiveType && /^(slow-2g|2g|3g)$/.test(c.effectiveType));
-  if (pocoMovimiento || conexionMala) return;
+  if (conexionMala) return;
 
   // Safari y iOS decodifican HEVC, que aqui pesa la mitad.
   var puedeHevc = document.createElement("video")
@@ -397,7 +399,16 @@
   v.appendChild(fuente);
   v.preload = "auto";
   v.load();
-  v.play().catch(function () { /* si el navegador lo bloquea, queda el poster */ });
+
+  // Quien pide menos movimiento NO deja de ver el video: deja de verlo
+  // moverse solo. Se le dan los controles y decide.
+  var pocoMovimiento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (pocoMovimiento) {
+    v.controls = true;
+    v.removeAttribute("loop");
+    return;
+  }
+  v.play().catch(function () { v.controls = true; });
 })();
 
 /* CONFIGURACION DE PAGO ---------------------------------------------
