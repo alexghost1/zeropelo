@@ -187,3 +187,11 @@ details p{margin:14px 0 0;color:var(--tinta-suave);font-size:.96rem}
 .form-msg.err{color:#b23c2c}
 .pack-img{border-radius:10px;overflow:hidden;margin:-6px 0 16px;background:var(--crema)}
 @media(max-width:520px){.form-fila{flex-direction:column}}
+
+/* aviso de devoluciones previo a la compra (art. 97.1.i RDL 1/2007) */
+.aviso-dev{max-width:820px;margin:22px auto 0;background:var(--papel);
+  border:1px solid var(--borde);border-radius:var(--r);padding:18px 22px;
+  font-size:.9rem;color:var(--tinta-suave);line-height:1.6}
+.aviso-dev b{color:var(--tinta)}
+.aviso-dev .tit{display:block;font-weight:700;color:var(--tinta);margin-bottom:6px;font-size:.95rem}
+.aviso-dev a{color:var(--teal-osc)}
