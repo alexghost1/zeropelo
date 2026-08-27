@@ -4,7 +4,7 @@
 > entrada. Contiene de dónde viene el proyecto, qué se ha hecho, qué decisiones se
 > tomaron y por qué, y qué queda pendiente. Lee entero antes de proponer nada.
 >
-> **Última actualización:** 2026-08-27
+> **Última actualización:** 2026-08-27 (tarde)
 
 ---
 
@@ -38,36 +38,40 @@ del proyecto local, y resumidas en la sección 6 de este documento.
 
 ---
 
-## 3. El producto y por qué se eligió
+## 3. El producto
 
-**Rodillo quitapelos reutilizable.** Sin adhesivo, sin recambios, sin pilas: el pelo se
-acumula en una cámara interior que se abre y se vacía.
+**Rodillo quitapelos adhesivo con tapa transparente y rollo reemplazable.**
+
+> ⚠️ **Corrección del 27/08/2026.** Durante los dos primeros días se trabajó sobre una
+> suposición equivocada: se creía que era un rodillo de cámara reutilizable «sin
+> recambios». **No lo es.** Lleva rollo adhesivo que se cambia. Toda la comunicación que
+> afirmaba lo contrario se retiró el mismo día por ser publicidad engañosa.
+
+**Especificaciones del fabricante:** ABS + PC + TPR · 19,5 × 11 × 6,5 cm · 160 g ·
+botón PUSH para cambiar el rollo · blanco con detalles naranja y tapa transparente ·
+para ropa, muebles, sofás, camas y asientos de coche.
 
 **Precios:** 24,99 € el rodillo · 34,99 € el kit (rodillo + guante de silicona +
 atrapapelos de lavadora). IVA incluido, envío gratis.
 
-### Por qué este y no otro
+### La diferenciación, y es honesta
 
-- **El dolor está confirmado como mainstream en España.** Medios generalistas
-  publicaron en 2026 artículos sobre cómo quitar el pelo de mascota del sofá.
-- **Mercado:** más de 16 millones de mascotas en España (9,3 M perros, 5,8 M gatos).
-  El gasto en accesorios subió un 7,3 % en dos años; el canal online crece al 8,17 % anual.
-- **Encaja en el patrón que convierte en TikTok Shop España:** 6-45 € con demostración
-  clara en cámara. Este producto *es* su propia demostración.
-- **Criterio decisivo, añadido durante la ejecución: «si falla, no pasa nada».**
-  Al importar de China, el vendedor es *importador* a efectos de la Directiva
-  85/374/CEE y responde como productor. Se descartaron productos cuyo fallo cause daño.
+El producto **no limpia mejor** que un rodillo de supermercado. Lleva recambios como
+cualquier otro. Lo que cambia es **la tapa**:
 
-### Qué se descartó y por qué
+- En el cajón no coge polvo, así que no hay que arrancar dos hojas antes de usarlo.
+- Se puede llevar en el bolso o la guantera sin que se pegue a todo.
+- Está listo cuando lo coges.
 
-| Producto | Motivo |
-|---|---|
-| Hamaca de ventana para gato | Sostiene un animal vivo en altura con ventosas. Riesgo de responsabilidad por producto inaceptable, pese a mejor valor percibido. |
-| Protector de sofá antiarañazos | Saturado: ya lo distribuyen Leroy Merlin, Tiendanimal, ManoMano y SHEIN. |
-| Fuente de agua / juguete láser | Batería o bomba: marcado CE, directiva RAEE, litio encarece el envío aéreo. |
-| Comedero antivoracidad | Contacto alimentario: Reglamento (CE) 1935/2004. |
+**El producto no limpia mejor: está disponible.** El 95 % del tiempo está guardado, no en
+uso, y ahí es donde gana. Ese es el argumento y es suficiente.
 
----
+### El competidor real
+
+No es Amazon: es **no hacer nada**. La mayoría convive con el pelo y ha dejado de buscar
+solución. El anuncio no debe convencer de que somos mejores, sino **volver a hacerles ver
+el pelo**. Y la compra es por descubrimiento (un vídeo), no por búsqueda: en búsqueda de
+producto se pierde siempre contra Amazon.
 
 ## 4. Economía
 
