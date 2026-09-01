@@ -51,7 +51,7 @@ del proyecto local, y resumidas en la sección 6 de este documento.
 botón PUSH para cambiar el rollo · blanco con detalles naranja y tapa transparente ·
 para ropa, muebles, sofás, camas y asientos de coche.
 
-**Precios:** 24,99 € el rodillo · 34,99 € el kit (rodillo + guante de silicona +
+**Precios:** 34,99 € el rodillo · 44,99 € el kit (rodillo + guante de silicona +
 atrapapelos de lavadora). IVA incluido, envío gratis.
 
 ### La diferenciación, y es honesta
@@ -77,20 +77,22 @@ producto se pierde siempre contra Amazon.
 
 | | Rodillo | Kit |
 |---|---|---|
-| PVP (IVA incl.) | 24,99 € | 34,99 € |
-| Base imponible | 20,65 € | 28,92 € |
-| Coste desembarcado (estimado) | 5,80 € | 9,50 € |
-| **Margen bruto** | **71,9 %** | **67,2 %** |
-| Markup | x4,3 | x3,7 |
+| PVP (IVA incl.) | 34,99 € | 44,99 € |
+| Base imponible | 28,92 € | 37,18 € |
+| Coste desembarcado (VERIFICADO en CJ 28-ago) | 13,44 € (\$14,77) | 17,14 € |
+| **Margen de contribución** | **15,18 €** | **19,53 €** |
+| CPA break-even / objetivo | 15,18 € / 9,11 € | 19,53 € / 11,72 € |
 
 > **El margen neto NO es del 60 %.** El bruto sí, pero tras restar el coste de captar
 > cliente (8-14 € realistas en Meta/TikTok España), pasarela y devoluciones, el neto
 > queda en **15-30 %**. Cualquier plan que asuma más que eso está mal planteado.
 
-**Proveedor:** CJ Dropshipping, **con almacén en España** → 3-7 días de entrega, frente
-a 2-4 semanas desde China. Ese plazo es el argumento comercial principal de la tienda.
-Los costes están marcados como ESTIMADO: CJ bloquea el acceso automatizado y no se
-pudieron verificar. Detalle en `data/proveedor.json` del proyecto local.
+**Proveedor:** CJ Dropshipping, SKU `CJMY200580807GT`, vendedor PREMIUMGOODS (Zhejiang).
+⚠️ **Envío desde China, 8-18 días naturales.** El «almacén en España» que figuraba aquí
+hasta el 1-sep-2026 **no aplica a este SKU** — se verificó en la ficha real de CJ el
+28-ago-2026 y el stock está en fábrica, no en España. Coste verificado: producto \$5,80
++ envío \$8,97 = **\$14,77** puesto en España. Evidencia en
+`data/VERIFICACION-CJ-2026-08-28.md` del proyecto local.
 
 ---
 
